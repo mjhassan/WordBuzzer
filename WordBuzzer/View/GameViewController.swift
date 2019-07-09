@@ -60,7 +60,7 @@ fileprivate extension GameViewController {
             }, matchCallback: { [weak self] word in
                 DispatchQueue.main.async {
                     if let spanish = word?.spanish {
-                        self?.spawnRandomPosition(with: spanish)
+                        self?.spawnRandomPosition(with: spanish.capitalized)
                     }
                 }
         })
