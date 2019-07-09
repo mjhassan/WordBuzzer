@@ -21,12 +21,13 @@ class StartViewController: UIViewController {
         return vm
     }()
     
+    // MARK:- overriden methods
     override func viewDidLoad() {
         super.viewDidLoad()
         _tableView.tableFooterView = UIView()
         _tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_id)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segue_id,
             let destination = segue.destination as? GameViewController {
@@ -38,6 +39,7 @@ class StartViewController: UIViewController {
         return identifier == segue_id && viewModel.canGoForward
     }
     
+    // MARK: - IBActions
     @IBAction func addPlayer(_ sender: UIButton) {
         guard viewModel.players.count < 6 else {
             // six player game

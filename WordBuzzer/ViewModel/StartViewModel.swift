@@ -7,20 +7,16 @@
 //
 
 import Foundation
-import os.log
-import Alamofire
 
 class StartViewModel {
-    private let urlString = "https://gist.githubusercontent.com/DroidCoder/7ac6cdb4bf5e032f4c737aaafe659b33/raw/baa9fe0d586082d85db71f346e2b039c580c5804/words.json"
-    
     public var players: [Player] = [Player()]
-    public var words: [word] = [word]()
+    public var words: [Word] = [Word]()
     public var canGoForward: Bool {
         return players.count > 0 && words.count > 0
     }
     
     init() {
-        fetchData()
+        loadData()
     }
     
     func getPlayer(at index: Int) -> Player {
@@ -39,23 +35,37 @@ class StartViewModel {
         self.players.append(player)
     }
     
-    private func fetchData() {
-        Alamofire.request(urlString).responseJSON { [weak self] response in
-            guard let data = response.data else {
+    private func loadData() {
+        Services().fetchData { [weak self] data in
+            guard let data = data else {
+                if let _localData = self?.getLocalData() {
+                    self?.decodeJSONData(_localData)
+                }
                 return
             }
             
-            do {
-                let models = try JSONDecoder().decode([word].self, from: data)
-                self?.words = models
-            }
-            catch let error {
-                let log = "Data mapping failed. ERROR: \(error)"
-                if #available(iOS 12.0, *) {
-                    os_log("%@", type: .debug, log)
-                } else {
-                    print("\(log)")
-                }
+            self?.decodeJSONData(data)
+        }
+    }
+    
+    private func getLocalData() -> Data? {
+        guard let url = Bundle.main.url(forResource: "words", withExtension: ".json"),
+            let data = try? Data(contentsOf: url) else {
+                return nil
+        }
+        
+        return data
+    }
+    
+    private func decodeJSONData(_ data: Data) {
+        do {
+            let models = try JSONDecoder().decode([Word].self, from: data)
+            self.words = models
+        }
+        catch _ {
+            print("decoding failed, try local data")
+            if let _localData = getLocalData() {
+                decodeJSONData(_localData)
             }
         }
     }

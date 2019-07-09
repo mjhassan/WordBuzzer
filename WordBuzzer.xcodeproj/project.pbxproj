@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08657DA422D4D5EC00B80D37 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08657DA322D4D5EC00B80D37 /* Services.swift */; };
 		08B3B41422D4871D0017BFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B41322D4871D0017BFE9 /* AppDelegate.swift */; };
 		08B3B41622D4871D0017BFE9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B41522D4871D0017BFE9 /* StartViewController.swift */; };
 		08B3B41922D4871D0017BFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B41722D4871D0017BFE9 /* Main.storyboard */; };
@@ -15,12 +16,13 @@
 		08B3B42922D4871D0017BFE9 /* WordBuzzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B42822D4871D0017BFE9 /* WordBuzzerTests.swift */; };
 		08B3B43422D4871D0017BFE9 /* WordBuzzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B43322D4871D0017BFE9 /* WordBuzzerUITests.swift */; };
 		08B3B44922D487B20017BFE9 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B44822D487B20017BFE9 /* words.json */; };
-		08B3B44B22D487CD0017BFE9 /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44A22D487CD0017BFE9 /* word.swift */; };
+		08B3B44B22D487CD0017BFE9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44A22D487CD0017BFE9 /* Word.swift */; };
 		08B3B44D22D48CCC0017BFE9 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */; };
 		08B3B44F22D48D9A0017BFE9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44E22D48D9A0017BFE9 /* Player.swift */; };
 		08B3B45122D48F040017BFE9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45022D48F040017BFE9 /* GameViewModel.swift */; };
 		08B3B45322D48F260017BFE9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45222D48F260017BFE9 /* GameViewController.swift */; };
 		08B3B45622D49C1A0017BFE9 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45522D49C1A0017BFE9 /* Sounds.swift */; };
+		08B3B45922D49E1C0017BFE9 /* UInt+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45822D49E1C0017BFE9 /* UInt+Random.swift */; };
 		7A19659A64C0CD48A48E6469 /* Pods_WordBuzzerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */; };
 		9F2438F16C4FDB07BB59D02E /* Pods_WordBuzzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */; };
 		F7A34BF73F0DC2798542AFD3 /* Pods_WordBuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */; };
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08657DA322D4D5EC00B80D37 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		08B3B41022D4871D0017BFE9 /* WordBuzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordBuzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B3B41322D4871D0017BFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B3B41522D4871D0017BFE9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -58,12 +61,13 @@
 		08B3B43322D4871D0017BFE9 /* WordBuzzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBuzzerUITests.swift; sourceTree = "<group>"; };
 		08B3B43522D4871D0017BFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08B3B44822D487B20017BFE9 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
-		08B3B44A22D487CD0017BFE9 /* word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = word.swift; sourceTree = "<group>"; };
+		08B3B44A22D487CD0017BFE9 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		08B3B44E22D48D9A0017BFE9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		08B3B45022D48F040017BFE9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		08B3B45222D48F260017BFE9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		08B3B45522D49C1A0017BFE9 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		08B3B45822D49E1C0017BFE9 /* UInt+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt+Random.swift"; sourceTree = "<group>"; };
 		3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A51B2A57EF993DA45444455 /* Pods-WordBuzzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerTests.release.xcconfig"; path = "Target Support Files/Pods-WordBuzzerTests/Pods-WordBuzzerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +172,7 @@
 		08B3B44322D487500017BFE9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				08B3B44A22D487CD0017BFE9 /* word.swift */,
+				08B3B44A22D487CD0017BFE9 /* Word.swift */,
 				08B3B44E22D48D9A0017BFE9 /* Player.swift */,
 			);
 			path = Model;
@@ -214,9 +218,19 @@
 		08B3B45422D49C0A0017BFE9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				08B3B45722D49E050017BFE9 /* Extensions */,
 				08B3B45522D49C1A0017BFE9 /* Sounds.swift */,
+				08657DA322D4D5EC00B80D37 /* Services.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		08B3B45722D49E050017BFE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B45822D49E1C0017BFE9 /* UInt+Random.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		20830DF82BF3960180F662BF /* Pods */ = {
@@ -467,11 +481,13 @@
 				08B3B45322D48F260017BFE9 /* GameViewController.swift in Sources */,
 				08B3B45122D48F040017BFE9 /* GameViewModel.swift in Sources */,
 				08B3B44F22D48D9A0017BFE9 /* Player.swift in Sources */,
+				08B3B45922D49E1C0017BFE9 /* UInt+Random.swift in Sources */,
 				08B3B45622D49C1A0017BFE9 /* Sounds.swift in Sources */,
+				08657DA422D4D5EC00B80D37 /* Services.swift in Sources */,
 				08B3B41622D4871D0017BFE9 /* StartViewController.swift in Sources */,
 				08B3B44D22D48CCC0017BFE9 /* StartViewModel.swift in Sources */,
 				08B3B41422D4871D0017BFE9 /* AppDelegate.swift in Sources */,
-				08B3B44B22D487CD0017BFE9 /* word.swift in Sources */,
+				08B3B44B22D487CD0017BFE9 /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -632,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

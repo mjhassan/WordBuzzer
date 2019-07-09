@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "B20C4C29-AB5A-4339-97E8-D691EA866C3F"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D40EFA03-981A-4199-9D5B-1D10AE94D7BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WordBuzzer/View/GameViewController.swift"
+            timestampString = "584365434.960959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D40EFA03-981A-4199-9D5B-1D10AE94D7BD - 2f39f9b85df0c447"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in WordBuzzer.GameViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WordBuzzer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jahid.hassan/Workspace/iOS/Practise/WordBuzzer/WordBuzzer/View/GameViewController.swift"
+                  timestampString = "584365435.145599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "171">
+               </Location>
+               <Location
+                  uuid = "D40EFA03-981A-4199-9D5B-1D10AE94D7BD - 1ae3c2581821b6d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.String) -&gt; () in WordBuzzer.GameViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WordBuzzer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jahid.hassan/Workspace/iOS/Practise/WordBuzzer/WordBuzzer/View/GameViewController.swift"
+                  timestampString = "584365435.1473629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "163">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46895AB4-F3BD-41A2-A6E3-9A2EDC6A2F82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WordBuzzer/ViewModel/GameViewModel.swift"
+            timestampString = "584365434.961441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "start(loadWord:matchCallback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E550EE35-DD23-4A9E-910B-17F4A1446565"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WordBuzzer/ViewModel/GameViewModel.swift"
+            timestampString = "584365434.961737"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "start(loadWord:matchCallback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

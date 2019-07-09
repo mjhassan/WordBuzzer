@@ -10,13 +10,37 @@ import Foundation
 
 class GameViewModel {
     var players: [Player]
-    var words: [word]
+    var words: [Word]
+    var currentWord: Word!
+    var lastWord: Word?
     
-    init(_ players: [Player], words: [word]) {
+    private var timer: Timer?
+    private var hardness: Double = 0
+    
+    init(_ players: [Player], words: [Word]) {
         assert(players.count > 0, "ERROR: no player selected. This is a system error.")
         assert(words.count > 0, "There are no wrods found to start the game")
         
         self.players = players
         self.words = words
+    }
+    
+    func start(loadWord: (String)->Void, matchCallback: @escaping (Word?)->Void) {
+        currentWord = pickWord()
+        
+        loadWord(currentWord.english)
+        
+        timer?.invalidate()
+        timer = nil
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 3.0 - hardness, repeats: true, block: { [weak self] _ in
+            self?.lastWord = self?.pickWord() // set current word here randomly
+            
+            matchCallback(self?.lastWord)
+        })
+    }
+    
+    private func pickWord() -> Word {
+        return words[UInt32.random(words.count)]
     }
 }
