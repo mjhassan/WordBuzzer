@@ -26,15 +26,15 @@ class GameViewModel {
     }
     
     func start(loadWord: (String)->Void, matchCallback: @escaping (Word?)->Void) {
+        timer?.invalidate()
+        timer = nil
+        
         currentWord = pickWord()
         
         loadWord(currentWord.english)
         
-        timer?.invalidate()
-        timer = nil
-        
         timer = Timer.scheduledTimer(withTimeInterval: 3.0 - hardness, repeats: true, block: { [weak self] _ in
-            self?.lastWord = self?.pickWord() // set current word here randomly
+            self?.lastWord = arc4random_uniform(5) == 0 ? self?.currentWord:self?.pickWord()
             
             matchCallback(self?.lastWord)
         })
