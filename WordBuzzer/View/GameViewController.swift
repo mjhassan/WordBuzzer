@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  WordBuzzer
 //
 //  Created by Jahid Hassan on 7/9/19.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class GameViewController: UIViewController {
+    
+    public var viewModel: GameViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

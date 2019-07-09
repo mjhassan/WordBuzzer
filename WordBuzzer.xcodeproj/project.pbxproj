@@ -3,17 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		08B3B41422D4871D0017BFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B41322D4871D0017BFE9 /* AppDelegate.swift */; };
-		08B3B41622D4871D0017BFE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B41522D4871D0017BFE9 /* ViewController.swift */; };
+		08B3B41622D4871D0017BFE9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B41522D4871D0017BFE9 /* StartViewController.swift */; };
 		08B3B41922D4871D0017BFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B41722D4871D0017BFE9 /* Main.storyboard */; };
 		08B3B41B22D4871D0017BFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B41A22D4871D0017BFE9 /* Assets.xcassets */; };
 		08B3B41E22D4871D0017BFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B41C22D4871D0017BFE9 /* LaunchScreen.storyboard */; };
 		08B3B42922D4871D0017BFE9 /* WordBuzzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B42822D4871D0017BFE9 /* WordBuzzerTests.swift */; };
 		08B3B43422D4871D0017BFE9 /* WordBuzzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B43322D4871D0017BFE9 /* WordBuzzerUITests.swift */; };
+		08B3B44922D487B20017BFE9 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B3B44822D487B20017BFE9 /* words.json */; };
+		08B3B44B22D487CD0017BFE9 /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44A22D487CD0017BFE9 /* word.swift */; };
+		08B3B44D22D48CCC0017BFE9 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */; };
+		08B3B44F22D48D9A0017BFE9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B44E22D48D9A0017BFE9 /* Player.swift */; };
+		08B3B45122D48F040017BFE9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45022D48F040017BFE9 /* GameViewModel.swift */; };
+		08B3B45322D48F260017BFE9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45222D48F260017BFE9 /* GameViewController.swift */; };
+		08B3B45622D49C1A0017BFE9 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45522D49C1A0017BFE9 /* Sounds.swift */; };
+		7A19659A64C0CD48A48E6469 /* Pods_WordBuzzerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */; };
+		9F2438F16C4FDB07BB59D02E /* Pods_WordBuzzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */; };
+		F7A34BF73F0DC2798542AFD3 /* Pods_WordBuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		08B3B41022D4871D0017BFE9 /* WordBuzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordBuzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B3B41322D4871D0017BFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08B3B41522D4871D0017BFE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08B3B41522D4871D0017BFE9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		08B3B41822D4871D0017BFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08B3B41A22D4871D0017BFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B3B41D22D4871D0017BFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,22 @@
 		08B3B42F22D4871D0017BFE9 /* WordBuzzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordBuzzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B3B43322D4871D0017BFE9 /* WordBuzzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBuzzerUITests.swift; sourceTree = "<group>"; };
 		08B3B43522D4871D0017BFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B3B44822D487B20017BFE9 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		08B3B44A22D487CD0017BFE9 /* word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = word.swift; sourceTree = "<group>"; };
+		08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		08B3B44E22D48D9A0017BFE9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		08B3B45022D48F040017BFE9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		08B3B45222D48F260017BFE9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		08B3B45522D49C1A0017BFE9 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A51B2A57EF993DA45444455 /* Pods-WordBuzzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerTests.release.xcconfig"; path = "Target Support Files/Pods-WordBuzzerTests/Pods-WordBuzzerTests.release.xcconfig"; sourceTree = "<group>"; };
+		78E9083BEFB4C1830BCFB0CA /* Pods-WordBuzzerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerUITests.release.xcconfig"; path = "Target Support Files/Pods-WordBuzzerUITests/Pods-WordBuzzerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9737BB1F1781E2E1D906EE9E /* Pods-WordBuzzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzer.release.xcconfig"; path = "Target Support Files/Pods-WordBuzzer/Pods-WordBuzzer.release.xcconfig"; sourceTree = "<group>"; };
+		BAB82BD0C8E7A6A474870329 /* Pods-WordBuzzerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerTests.debug.xcconfig"; path = "Target Support Files/Pods-WordBuzzerTests/Pods-WordBuzzerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBE65F5C8363D6ED37329BF0 /* Pods-WordBuzzerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordBuzzerUITests/Pods-WordBuzzerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E792AB9C11F589BB8B34793D /* Pods-WordBuzzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzer.debug.xcconfig"; path = "Target Support Files/Pods-WordBuzzer/Pods-WordBuzzer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A34BF73F0DC2798542AFD3 /* Pods_WordBuzzer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2438F16C4FDB07BB59D02E /* Pods_WordBuzzerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A19659A64C0CD48A48E6469 /* Pods_WordBuzzerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +110,8 @@
 				08B3B42722D4871D0017BFE9 /* WordBuzzerTests */,
 				08B3B43222D4871D0017BFE9 /* WordBuzzerUITests */,
 				08B3B41122D4871D0017BFE9 /* Products */,
+				20830DF82BF3960180F662BF /* Pods */,
+				ACECFC7456D0EE0023964BB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +128,12 @@
 		08B3B41222D4871D0017BFE9 /* WordBuzzer */ = {
 			isa = PBXGroup;
 			children = (
-				08B3B41322D4871D0017BFE9 /* AppDelegate.swift */,
-				08B3B41522D4871D0017BFE9 /* ViewController.swift */,
-				08B3B41722D4871D0017BFE9 /* Main.storyboard */,
-				08B3B41A22D4871D0017BFE9 /* Assets.xcassets */,
-				08B3B41C22D4871D0017BFE9 /* LaunchScreen.storyboard */,
-				08B3B41F22D4871D0017BFE9 /* Info.plist */,
+				08B3B45422D49C0A0017BFE9 /* Utils */,
+				08B3B44722D487810017BFE9 /* Resources */,
+				08B3B44522D4875D0017BFE9 /* ViewModel */,
+				08B3B44422D487570017BFE9 /* View */,
+				08B3B44322D487500017BFE9 /* Model */,
+				08B3B44122D487320017BFE9 /* Supporting Files */,
 			);
 			path = WordBuzzer;
 			sourceTree = "<group>";
@@ -125,6 +156,92 @@
 			path = WordBuzzerUITests;
 			sourceTree = "<group>";
 		};
+		08B3B44122D487320017BFE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B41F22D4871D0017BFE9 /* Info.plist */,
+				08B3B41322D4871D0017BFE9 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08B3B44322D487500017BFE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B44A22D487CD0017BFE9 /* word.swift */,
+				08B3B44E22D48D9A0017BFE9 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08B3B44422D487570017BFE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B45222D48F260017BFE9 /* GameViewController.swift */,
+				08B3B41522D4871D0017BFE9 /* StartViewController.swift */,
+				08B3B44622D487680017BFE9 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B3B44522D4875D0017BFE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */,
+				08B3B45022D48F040017BFE9 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08B3B44622D487680017BFE9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B41722D4871D0017BFE9 /* Main.storyboard */,
+				08B3B41C22D4871D0017BFE9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		08B3B44722D487810017BFE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B44822D487B20017BFE9 /* words.json */,
+				08B3B41A22D4871D0017BFE9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08B3B45422D49C0A0017BFE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B45522D49C1A0017BFE9 /* Sounds.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		20830DF82BF3960180F662BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E792AB9C11F589BB8B34793D /* Pods-WordBuzzer.debug.xcconfig */,
+				9737BB1F1781E2E1D906EE9E /* Pods-WordBuzzer.release.xcconfig */,
+				BAB82BD0C8E7A6A474870329 /* Pods-WordBuzzerTests.debug.xcconfig */,
+				5A51B2A57EF993DA45444455 /* Pods-WordBuzzerTests.release.xcconfig */,
+				CBE65F5C8363D6ED37329BF0 /* Pods-WordBuzzerUITests.debug.xcconfig */,
+				78E9083BEFB4C1830BCFB0CA /* Pods-WordBuzzerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACECFC7456D0EE0023964BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */,
+				3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */,
+				5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B3B43822D4871D0017BFE9 /* Build configuration list for PBXNativeTarget "WordBuzzer" */;
 			buildPhases = (
+				F9B17EF1D9020FD80E0B22C8 /* [CP] Check Pods Manifest.lock */,
 				08B3B40C22D4871D0017BFE9 /* Sources */,
 				08B3B40D22D4871D0017BFE9 /* Frameworks */,
 				08B3B40E22D4871D0017BFE9 /* Resources */,
+				030AABD0956C41C84055A85E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B3B43B22D4871D0017BFE9 /* Build configuration list for PBXNativeTarget "WordBuzzerTests" */;
 			buildPhases = (
+				19116FCA432D89204CE5C3C8 /* [CP] Check Pods Manifest.lock */,
 				08B3B42022D4871D0017BFE9 /* Sources */,
 				08B3B42122D4871D0017BFE9 /* Frameworks */,
 				08B3B42222D4871D0017BFE9 /* Resources */,
@@ -167,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B3B43E22D4871D0017BFE9 /* Build configuration list for PBXNativeTarget "WordBuzzerUITests" */;
 			buildPhases = (
+				FF464FC73AE56F8F53096FE3 /* [CP] Check Pods Manifest.lock */,
 				08B3B42B22D4871D0017BFE9 /* Sources */,
 				08B3B42C22D4871D0017BFE9 /* Frameworks */,
 				08B3B42D22D4871D0017BFE9 /* Resources */,
@@ -230,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B3B41E22D4871D0017BFE9 /* LaunchScreen.storyboard in Resources */,
+				08B3B44922D487B20017BFE9 /* words.json in Resources */,
 				08B3B41B22D4871D0017BFE9 /* Assets.xcassets in Resources */,
 				08B3B41922D4871D0017BFE9 /* Main.storyboard in Resources */,
 			);
@@ -251,13 +373,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		030AABD0956C41C84055A85E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordBuzzer/Pods-WordBuzzer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordBuzzer/Pods-WordBuzzer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordBuzzer/Pods-WordBuzzer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19116FCA432D89204CE5C3C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordBuzzerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9B17EF1D9020FD80E0B22C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordBuzzer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF464FC73AE56F8F53096FE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordBuzzerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08B3B40C22D4871D0017BFE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08B3B41622D4871D0017BFE9 /* ViewController.swift in Sources */,
+				08B3B45322D48F260017BFE9 /* GameViewController.swift in Sources */,
+				08B3B45122D48F040017BFE9 /* GameViewModel.swift in Sources */,
+				08B3B44F22D48D9A0017BFE9 /* Player.swift in Sources */,
+				08B3B45622D49C1A0017BFE9 /* Sounds.swift in Sources */,
+				08B3B41622D4871D0017BFE9 /* StartViewController.swift in Sources */,
+				08B3B44D22D48CCC0017BFE9 /* StartViewModel.swift in Sources */,
 				08B3B41422D4871D0017BFE9 /* AppDelegate.swift in Sources */,
+				08B3B44B22D487CD0017BFE9 /* word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +644,7 @@
 		};
 		08B3B43922D4871D0017BFE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E792AB9C11F589BB8B34793D /* Pods-WordBuzzer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +663,7 @@
 		};
 		08B3B43A22D4871D0017BFE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9737BB1F1781E2E1D906EE9E /* Pods-WordBuzzer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +682,7 @@
 		};
 		08B3B43C22D4871D0017BFE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAB82BD0C8E7A6A474870329 /* Pods-WordBuzzerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +704,7 @@
 		};
 		08B3B43D22D4871D0017BFE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A51B2A57EF993DA45444455 /* Pods-WordBuzzerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +726,7 @@
 		};
 		08B3B43F22D4871D0017BFE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE65F5C8363D6ED37329BF0 /* Pods-WordBuzzerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +747,7 @@
 		};
 		08B3B44022D4871D0017BFE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E9083BEFB4C1830BCFB0CA /* Pods-WordBuzzerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
