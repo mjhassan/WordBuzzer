@@ -27,6 +27,10 @@
 		08B504AC22D4FEB600F9D607 /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B504AB22D4FEB600F9D607 /* UILabel+Animation.swift */; };
 		08B64CB122D595F3003EEB78 /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B64CB022D595F3003EEB78 /* PlayerButton.swift */; };
 		08B64CB322D59AE7003EEB78 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B64CB222D59AE7003EEB78 /* GameBrain.swift */; };
+		08B64CB822D5D611003EEB78 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08B64CB522D5D611003EEB78 /* correct.mp3 */; };
+		08B64CB922D5D611003EEB78 /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08B64CB622D5D611003EEB78 /* gameOver.wav */; };
+		08B64CBA22D5D611003EEB78 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08B64CB722D5D611003EEB78 /* wrong.mp3 */; };
+		08B64CBC22D5D6ED003EEB78 /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08B64CBB22D5D6ED003EEB78 /* button.wav */; };
 		7A19659A64C0CD48A48E6469 /* Pods_WordBuzzerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */; };
 		9F2438F16C4FDB07BB59D02E /* Pods_WordBuzzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */; };
 		F7A34BF73F0DC2798542AFD3 /* Pods_WordBuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */; };
@@ -76,6 +80,10 @@
 		08B504AB22D4FEB600F9D607 /* UILabel+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animation.swift"; sourceTree = "<group>"; };
 		08B64CB022D595F3003EEB78 /* PlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
 		08B64CB222D59AE7003EEB78 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
+		08B64CB522D5D611003EEB78 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		08B64CB622D5D611003EEB78 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
+		08B64CB722D5D611003EEB78 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		08B64CBB22D5D6ED003EEB78 /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
 		269CC9BE4313858935FC89AB /* Pods-WordBuzzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordBuzzerTests/Pods-WordBuzzerTests.release.xcconfig"; sourceTree = "<group>"; };
 		39DED3448605E1FD8025EF48 /* Pods-WordBuzzerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordBuzzerUITests/Pods-WordBuzzerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +233,7 @@
 		08B3B44722D487810017BFE9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				08B64CB422D5D604003EEB78 /* sounds */,
 				08B3B44822D487B20017BFE9 /* words.json */,
 				08B3B41A22D4871D0017BFE9 /* Assets.xcassets */,
 			);
@@ -249,6 +258,17 @@
 				08B504AB22D4FEB600F9D607 /* UILabel+Animation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08B64CB422D5D604003EEB78 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				08B64CBB22D5D6ED003EEB78 /* button.wav */,
+				08B64CB522D5D611003EEB78 /* correct.mp3 */,
+				08B64CB622D5D611003EEB78 /* gameOver.wav */,
+				08B64CB722D5D611003EEB78 /* wrong.mp3 */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 		20830DF82BF3960180F662BF /* Pods */ = {
@@ -388,6 +408,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B64CB922D5D611003EEB78 /* gameOver.wav in Resources */,
+				08B64CB822D5D611003EEB78 /* correct.mp3 in Resources */,
+				08B64CBC22D5D6ED003EEB78 /* button.wav in Resources */,
+				08B64CBA22D5D611003EEB78 /* wrong.mp3 in Resources */,
 				08B3B41E22D4871D0017BFE9 /* LaunchScreen.storyboard in Resources */,
 				08B3B44922D487B20017BFE9 /* words.json in Resources */,
 				08B3B41B22D4871D0017BFE9 /* Assets.xcassets in Resources */,

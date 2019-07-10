@@ -37,9 +37,11 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func smashedBazzer(_ sender: PlayerButton) {
+        Sounds.button()
+        
         displayLabel.isHidden = true
         
-        viewModel?.updateScore(sender.player)
+        viewModel?.updateScore(sender.player, { $0 ? Sounds.correct():Sounds.wrong()})
         viewModel!.isSoloPlay ? updateSoloPlayerScore():sender.update()
         
         
@@ -48,6 +50,8 @@ class GameViewController: UIViewController {
             addResetAction()
             return
         }
+        
+        Sounds.gameOver()
         
         viewModel?.stop()
         

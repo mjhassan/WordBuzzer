@@ -85,8 +85,11 @@ class GameViewModel {
         return players[index]
     }
     
-    func updateScore(_ player: Player?) {
+    func updateScore(_ player: Player?, _ toast: ((Bool)->Void)? = nil) {
         guard let player = player else { return }
+        
+        toast?(currentWord == lastWord)
+        
         brain.updateScore(player, isCorrect: currentWord == lastWord)
     }
     
