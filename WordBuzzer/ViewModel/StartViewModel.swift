@@ -22,8 +22,8 @@ class StartViewModel {
         loadData()
     }
     
-    func clearPlayer(at index: Int) {
-        players.removeSubrange(0..<playerCount)
+    func clearPlayer() {
+        players.removeSubrange(1..<playerCount)
     }
     
     func addPlayer(_ player: Player) {
