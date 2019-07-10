@@ -36,6 +36,7 @@ class GameViewController: UIViewController {
         updateSoloPlayerScore()
     }
     
+    // MARK:- IBActions
     @IBAction func smashedBazzer(_ sender: PlayerButton) {
         Sounds.button()
         
@@ -67,6 +68,7 @@ class GameViewController: UIViewController {
     }
 }
 
+// MARK:-
 fileprivate extension GameViewController {
     func configureView() {
         displayLabel = UILabel(frame: .zero)
@@ -79,11 +81,14 @@ fileprivate extension GameViewController {
             return
         }
         
-        soloScoreboard.isHidden = playersNo > 1
+        soloScoreboard.isHidden = !viewModel!.isSoloPlay
         
         for idx in 0..<playersNo {
             buzzerButtons[idx].player = viewModel?.getPlayer(at: idx)
-            buzzerButtons[idx].update()
+            
+            if !viewModel!.isSoloPlay {
+                buzzerButtons[idx].update()
+            }
         }
     }
     
