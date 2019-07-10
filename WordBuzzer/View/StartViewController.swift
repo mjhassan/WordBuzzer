@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class StartViewController: UIViewController {
-
-    @IBOutlet weak var _tableView: UITableView!
-    @IBOutlet weak var editButton: UIButton!
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var hintLabel: UILabel!
     
     private let segue_id = "GameStartSegue"
-    private let cell_id = "Cell"
+    private let user_key = "host_player_name_key"
     
     private lazy var viewModel: StartViewModel = {
         let vm = StartViewModel()
@@ -24,8 +25,12 @@ class StartViewController: UIViewController {
     // MARK:- overriden methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        _tableView.tableFooterView = UIView()
-        _tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_id)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        checkAndConfigPlayer()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,41 +47,55 @@ class StartViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func addPlayer(_ sender: UIButton) {
-        guard viewModel.players.count < 6 else {
-            // six player game
-            return
+    @IBAction func multiPlayer(_ sender: UIButton) {
+        askPlayerName { [unowned self] opponent in
+            self.viewModel.addPlayer(Player(name: opponent))
+            self.performSegue(withIdentifier: self.segue_id, sender: nil)
         }
-    }
-    
-    @IBAction func removePlayer(_ sender: UIButton) {
-        editButton.setTitle(!_tableView.isEditing ? "Done":"Edit", for: .normal)
-        _tableView.setEditing(!_tableView.isEditing, animated: true)
     }
 }
 
-extension StartViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.players.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cell_id, for: indexPath)
-        
-        let player = viewModel.getPlayer(at: indexPath.item)
-        cell.textLabel?.text = player.name
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            viewModel.removePlayer(at: indexPath.item)
+fileprivate extension StartViewController {
+    func checkAndConfigPlayer() {
+        if viewModel.playerCount == 0 {
+            if let name = UserDefaults.standard.string(forKey: user_key) {
+                self.viewModel.addPlayer(Player(name: name))
+                self.setWelcomeNote(name)
+                return
+            }
+            
+            askPlayerName(false) { [unowned self] name in
+                UserDefaults.standard.set(name, forKey: self.user_key)
+                self.viewModel.addPlayer(Player(name: name))
+                self.setWelcomeNote(name)
+            }
         }
+    }
+    
+    func setWelcomeNote(_ name: String) {
+        welcomeLabel.text = "Welcome \(name)"
+    }
+    
+    func askPlayerName(_ opponent: Bool = true, callback: @escaping (String)->Void) {
+        var responder: SCLAlertViewResponder?
+        
+        let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance( showCloseButton: false ))
+        let field = alert.addTextField("name")
+        alert.addButton(opponent ? "Start":"Lemme in!") {
+            guard let name = field.text, !name.isEmpty else {
+                self.askPlayerName(opponent, callback: callback)
+                return
+            }
+            
+            callback(name)
+        }
+        
+        if opponent {
+            alert.addButton("Go Back", backgroundColor: .darkGray) {
+                responder?.close()
+            }
+        }
+        
+         responder = alert.showEdit((opponent ? "Game On!":"Hello Babbel-er"), subTitle: "To start please enter your name: ")
     }
 }

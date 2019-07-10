@@ -9,26 +9,21 @@
 import Foundation
 
 class StartViewModel {
-    public var players: [Player] = [Player()]
+    public var players: [Player] = [Player]()
     public var words: [Word] = [Word]()
     public var canGoForward: Bool {
-        return players.count > 0 && words.count > 0
+        return playerCount > 0 && words.count > 0
+    }
+    public var playerCount: Int {
+        return players.count
     }
     
     init() {
         loadData()
     }
     
-    func getPlayer(at index: Int) -> Player {
-        return players[index]
-    }
-    
-    func removePlayer(at index: Int) {
-        players.remove(at: index)
-        
-        if players.count == 0 {
-            players.append(Player())
-        }
+    func clearPlayer(at index: Int) {
+        players.removeSubrange(0..<playerCount)
     }
     
     func addPlayer(_ player: Player) {
