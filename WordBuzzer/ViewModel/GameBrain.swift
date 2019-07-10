@@ -13,6 +13,18 @@ class GameBrain {
     private let MULTI_WIN_COUNT = 10
     private var players: [Player]
     
+    var firstPlayerScore: Int {
+        return players.first?.score ?? 0
+    }
+    
+    var firstPlayerAttempt: Int {
+        return SINGLE_PLAYER_OVER_COUNT - (players.first?.attempt ?? 0)
+    }
+    
+    var secondPlayerScore: Int {
+        return players.last?.score ?? 0
+    }
+    
     var gameOver: Player? {
         
         // single player game

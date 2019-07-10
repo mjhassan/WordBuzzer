@@ -20,6 +20,22 @@ class GameViewModel {
         return players.count
     }
     
+    var isSoloPlay: Bool {
+        return playerCount == 1
+    }
+    
+    var attemptLeft: Int {
+        return brain.firstPlayerAttempt
+    }
+    
+    var firstPlayerScore: Int {
+        return brain.firstPlayerScore
+    }
+    
+    var secondPlayerScore: Int {
+        return brain.secondPlayerScore
+    }
+    
     private var callBack: ((Word?)->Void)?
     private var timer: Timer?
     private var hardness: Double = 0

@@ -20,4 +20,12 @@ class PlayerButton: UIButton {
             setTitle("\(_player.name)", for: .normal)
         }
     }
+    
+    func update() {
+        guard let _player = player else {
+            return
+        }
+        
+        setTitle("\(_player.name): \(_player.score)", for: .normal)
+    }
 }

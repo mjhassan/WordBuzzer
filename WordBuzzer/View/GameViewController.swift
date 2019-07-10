@@ -14,6 +14,10 @@ class GameViewController: UIViewController {
     @IBOutlet var buzzerButtons: [PlayerButton]!
     @IBOutlet weak var refWordLabel: UILabel!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var soloScoreboard: UIView!
+    @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     private var displayLabel: UILabel!
     
     public var viewModel: GameViewModel?
@@ -26,10 +30,18 @@ class GameViewController: UIViewController {
         addResetAction()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateSoloPlayerScore()
+    }
+    
     @IBAction func smashedBazzer(_ sender: PlayerButton) {
         displayLabel.isHidden = true
         
         viewModel?.updateScore(sender.player)
+        viewModel!.isSoloPlay ? updateSoloPlayerScore():sender.update()
+        
         
         guard let winner = viewModel?.getWinner() else {
             viewModel?.levelUp()
@@ -47,7 +59,7 @@ class GameViewController: UIViewController {
         alert.addButton("Go Home") {
             self.navigationController?.popViewController(animated: true)
         }
-        alert.showInfo("GAME OVER", subTitle: "You scored \(winner.score)")
+        alert.showInfo("GAME OVER", subTitle: viewModel!.isSoloPlay ? "You scored \(winner.score)":"\(winner.name) won")
     }
 }
 
@@ -63,9 +75,17 @@ fileprivate extension GameViewController {
             return
         }
         
+        soloScoreboard.isHidden = playersNo > 1
+        
         for idx in 0..<playersNo {
             buzzerButtons[idx].player = viewModel?.getPlayer(at: idx)
+            buzzerButtons[idx].update()
         }
+    }
+    
+    func updateSoloPlayerScore() {
+        lifeLabel.text = String(repeating: "❤️ ", count: viewModel!.attemptLeft)
+        scoreLabel.text = "\(viewModel!.firstPlayerScore)"
     }
     
     func addResetAction() {
