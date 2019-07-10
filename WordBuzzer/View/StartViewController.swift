@@ -96,6 +96,8 @@ fileprivate extension StartViewController {
             }
         }
         
-         responder = alert.showEdit((opponent ? "Game On!":"Hello Babbel-er"), subTitle: "To start please enter your name: ")
+         responder = alert.showEdit((opponent ? "Game On!":"Hello Babbel-er"),
+                                    subTitle: "To start please enter your name",
+                                    circleIconImage: UIImage(named: "babbel"))
     }
 }

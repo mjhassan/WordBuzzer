@@ -64,14 +64,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-TF-9GW">
-                                <rect key="frame" x="20" y="695" width="374" height="79.5"/>
+                                <rect key="frame" x="20" y="558" width="374" height="79.5"/>
                                 <string key="text">Gameplay: An english word will appear at the center. Random Spanish words will fade in and out of the screen. Hit buzzer to score when correct translation is showing.</string>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-XH-GIS">
-                                <rect key="frame" x="20" y="782.5" width="374" height="59.5"/>
+                                <rect key="frame" x="20" y="645.5" width="374" height="59.5"/>
                                 <string key="text">Solo play will get 3 changes, for each wrong translation guess you will lose one. In multiplayer mode, first one to score 10 wins.</string>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +90,7 @@
                             <constraint firstItem="ESp-JI-B0w" firstAttribute="top" secondItem="dqs-pa-73j" secondAttribute="bottom" constant="20" id="D1a-Za-jgS"/>
                             <constraint firstItem="4x4-Mw-d4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oh7-Vq-IHB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4x4-Mw-d4w" secondAttribute="trailing" constant="8" id="WdB-rt-iV1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gzD-XH-GIS" secondAttribute="bottom" constant="20" id="c8p-3u-O2P"/>
+                            <constraint firstItem="q6D-TF-9GW" firstAttribute="top" secondItem="cl7-4c-rbq" secondAttribute="bottom" constant="20" id="dwn-yd-x2T"/>
                             <constraint firstItem="gzD-XH-GIS" firstAttribute="leading" secondItem="q6D-TF-9GW" secondAttribute="leading" id="e5A-pw-TJY"/>
                             <constraint firstItem="4x4-Mw-d4w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-35" id="g57-FH-TwH"/>
                             <constraint firstItem="gzD-XH-GIS" firstAttribute="trailing" secondItem="q6D-TF-9GW" secondAttribute="trailing" id="ilI-qI-A9W"/>
