@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class GameViewController: UIViewController {
     
-    @IBOutlet var buzzerButtons: [UIButton]!
+    @IBOutlet var buzzerButtons: [PlayerButton]!
     @IBOutlet weak var refWordLabel: UILabel!
     @IBOutlet weak var container: UIView!
     private var displayLabel: UILabel!
@@ -25,13 +26,28 @@ class GameViewController: UIViewController {
         addResetAction()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    @IBAction func smashedBazzer(_ sender: UIButton) {
+    @IBAction func smashedBazzer(_ sender: PlayerButton) {
         displayLabel.isHidden = true
-        addResetAction()
+        
+        viewModel?.updateScore(sender.player)
+        
+        guard let winner = viewModel?.getWinner() else {
+            viewModel?.levelUp()
+            addResetAction()
+            return
+        }
+        
+        viewModel?.stop()
+        
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false,
+            showCircularIcon: false
+        )
+        let alert = SCLAlertView(appearance: appearance)
+        alert.addButton("Go Home") {
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.showInfo("GAME OVER", subTitle: "You scored \(winner.score)")
     }
 }
 
@@ -43,12 +59,12 @@ fileprivate extension GameViewController {
         displayLabel.font = UIFont.systemFont(ofSize: 22)
         container.addSubview(displayLabel)
         
-        guard let playersNo = viewModel?.players.count, playersNo > 0 else {
+        guard let playersNo = viewModel?.playerCount, playersNo > 0 else {
             return
         }
         
         for idx in 0..<playersNo {
-            buzzerButtons[idx].isHidden = false
+            buzzerButtons[idx].player = viewModel?.getPlayer(at: idx)
         }
     }
     
@@ -56,6 +72,7 @@ fileprivate extension GameViewController {
         viewModel?.start(loadWord: { [weak self] english in
                 DispatchQueue.main.async {
                     self?.refWordLabel.text = "\(english.capitalized)"
+                    self?.refWordLabel.easeIn()
                 }
             }, matchCallback: { [weak self] word in
                 DispatchQueue.main.async {

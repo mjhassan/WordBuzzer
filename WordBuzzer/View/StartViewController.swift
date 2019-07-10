@@ -31,7 +31,9 @@ class StartViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segue_id,
             let destination = segue.destination as? GameViewController {
-            destination.viewModel = GameViewModel(viewModel.players, words: viewModel.words)
+            
+            let brain = GameBrain(viewModel.players)
+            destination.viewModel = GameViewModel(brain, players: viewModel.players, words: viewModel.words)
         }
     }
     

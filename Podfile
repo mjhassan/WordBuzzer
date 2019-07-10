@@ -5,6 +5,7 @@ target 'WordBuzzer' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SCLAlertView'
 
   target 'WordBuzzerTests' do
     inherit! :search_paths

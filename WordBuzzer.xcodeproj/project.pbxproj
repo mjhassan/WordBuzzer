@@ -25,6 +25,8 @@
 		08B3B45922D49E1C0017BFE9 /* UInt+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B45822D49E1C0017BFE9 /* UInt+Random.swift */; };
 		08B504AA22D4F44300F9D607 /* UILabel+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B504A922D4F44300F9D607 /* UILabel+Resize.swift */; };
 		08B504AC22D4FEB600F9D607 /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B504AB22D4FEB600F9D607 /* UILabel+Animation.swift */; };
+		08B64CB122D595F3003EEB78 /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B64CB022D595F3003EEB78 /* PlayerButton.swift */; };
+		08B64CB322D59AE7003EEB78 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B64CB222D59AE7003EEB78 /* GameBrain.swift */; };
 		7A19659A64C0CD48A48E6469 /* Pods_WordBuzzerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694EA34857EB8905E1F41C3 /* Pods_WordBuzzerUITests.framework */; };
 		9F2438F16C4FDB07BB59D02E /* Pods_WordBuzzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */; };
 		F7A34BF73F0DC2798542AFD3 /* Pods_WordBuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C87865DC53305EB4B28551 /* Pods_WordBuzzer.framework */; };
@@ -72,6 +74,8 @@
 		08B3B45822D49E1C0017BFE9 /* UInt+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt+Random.swift"; sourceTree = "<group>"; };
 		08B504A922D4F44300F9D607 /* UILabel+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Resize.swift"; sourceTree = "<group>"; };
 		08B504AB22D4FEB600F9D607 /* UILabel+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animation.swift"; sourceTree = "<group>"; };
+		08B64CB022D595F3003EEB78 /* PlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
+		08B64CB222D59AE7003EEB78 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
 		269CC9BE4313858935FC89AB /* Pods-WordBuzzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordBuzzerTests/Pods-WordBuzzerTests.release.xcconfig"; sourceTree = "<group>"; };
 		39DED3448605E1FD8025EF48 /* Pods-WordBuzzerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordBuzzerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordBuzzerUITests/Pods-WordBuzzerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3BF0E32E7D7C4B921234FD84 /* Pods_WordBuzzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordBuzzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +198,7 @@
 				08B3B45222D48F260017BFE9 /* GameViewController.swift */,
 				08B3B41522D4871D0017BFE9 /* StartViewController.swift */,
 				08B3B44622D487680017BFE9 /* Storyboards */,
+				08B64CB022D595F3003EEB78 /* PlayerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			children = (
 				08B3B44C22D48CCC0017BFE9 /* StartViewModel.swift */,
 				08B3B45022D48F040017BFE9 /* GameViewModel.swift */,
+				08B64CB222D59AE7003EEB78 /* GameBrain.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -505,7 +511,9 @@
 				08657DA422D4D5EC00B80D37 /* Services.swift in Sources */,
 				08B3B41622D4871D0017BFE9 /* StartViewController.swift in Sources */,
 				08B3B44D22D48CCC0017BFE9 /* StartViewModel.swift in Sources */,
+				08B64CB322D59AE7003EEB78 /* GameBrain.swift in Sources */,
 				08B3B41422D4871D0017BFE9 /* AppDelegate.swift in Sources */,
+				08B64CB122D595F3003EEB78 /* PlayerButton.swift in Sources */,
 				08B3B44B22D487CD0017BFE9 /* Word.swift in Sources */,
 				08B504AA22D4F44300F9D607 /* UILabel+Resize.swift in Sources */,
 			);
