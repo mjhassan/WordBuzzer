@@ -30,7 +30,7 @@ It should be ensured that the correct word will be shown at a frequent enough pa
 
 ## Implementation
 - MVVM architectural pattern is used to implement the project. It is convenient for small project to ensure unit test.
-- There are both online and offline data consumption feature implemented. If device is online it will fetch JSON from provided url. Otherwise and if case of decoding failure it will use local JSON, provided in reqirement bundle.
+- There are both online and offline data consumption feature implemented. If device is online it will fetch JSON from provided url. Otherwise and in case of decoding failure it will use local JSON, provided in reqirement bundle.
 - There are two 3rd party libraries, Almofire and SCLAlertView, intergrated using cocoapod to demonstrate 3rd party integration capability.
 - Unit tests are written, as much as I could in that period of time. Much room for improvement.
 - For the wrong answers a random probability of 20% is used. That means, within 5 translations are being displayed one will be the correct answer.
