@@ -10,9 +10,10 @@ It should be ensured that the correct word will be shown at a frequent enough pa
 **Room for creativity**: The applicant can choose how to implement the success or failure feedback to the players.
 
 ## Project Specification
-| Xcode  | 10.2.1  |
+| Description  | Specification  |
 | ------------ | ------------ |
-| **Development SDK**  |  **iOS 12.0 ** |
+| **Xcode**| **10.2.1** |
+| **Development SDK**  |  **iOS 12.0** |
 | **Minimum supported SDK**  |  **iOS 10.0**  |
 | **Language**  | **Swift 4.2**  |
 |  **Cocoapod** | **1.7.3**  |
